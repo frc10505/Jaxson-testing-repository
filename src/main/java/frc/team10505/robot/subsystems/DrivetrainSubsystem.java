@@ -229,5 +229,15 @@ public class DrivetrainSubsystem extends TunerSwerveDrivetrain implements Subsys
         m_simNotifier.startPeriodic(kSimLoopPeriod);
     }
 
+    private void configPathPlanner() {
+        try{
+
+        }
+        catch(Exception e ){
+            DriverStation.reportError("PathPlanner failed", e.getStackTrace());
+
+        }
+    }
+
 
 }
