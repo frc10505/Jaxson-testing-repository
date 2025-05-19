@@ -11,6 +11,7 @@ import com.revrobotics.spark.SparkMax;
 
 import au.grapplerobotics.LaserCan;
 import edu.wpi.first.math.Matrix;
+import edu.wpi.first.math.controller.ArmFeedforward;
 import edu.wpi.first.math.controller.PIDController;
 import edu.wpi.first.math.numbers.N1;
 import edu.wpi.first.math.numbers.N3;
@@ -37,6 +38,10 @@ public class AlgaeSubsystem extends SubsystemBase {
     private final SparkAbsoluteEncoder pivotEncoder = pivotMotor.getAbsoluteEncoder();
     private double encoderValue;
     private double absoluteOffset = 180.0;
+
+    //Mechanism Controller Definitions
+    private final PIDController pivotController;
+    private final ArmFeedforward pivotFeedForward;
 
     public AlgaeSubsystem() {
         configAlgaeSubsys();

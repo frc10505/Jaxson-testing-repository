@@ -11,7 +11,7 @@ public class RobotContainer {
    // private SendableChooser<Double>
     private SendableChooser<Command> autonChooser;
 
-    public RobotConatiner() {
+    public RobotContainer() {
         AutoBuilder.buildAutoChooser();
         SmartDashboard.putData(autonChooser);
     }

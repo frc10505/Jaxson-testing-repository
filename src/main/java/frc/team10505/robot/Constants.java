@@ -1,5 +1,5 @@
 package frc.team10505.robot;
 
-public class Constants {
+public final class Constants {
     
 }
